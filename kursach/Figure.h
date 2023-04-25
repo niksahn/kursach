@@ -4,8 +4,7 @@
 #include <string>
 
 using namespace std;
-class Circle;
-class Square;
+
 class Figure {
 protected:
 	int x, y;

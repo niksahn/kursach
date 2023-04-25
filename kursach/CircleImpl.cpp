@@ -1,5 +1,6 @@
 #pragma once
 #include "Circle.h";
+#include "Figure.h";
 
 Circle::Circle(int _x, int _y, int r,  COLORREF c) : Figure(_x, _y, c), radius(r) {};
 

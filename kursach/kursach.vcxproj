@@ -130,6 +130,7 @@
     <ClCompile Include="FigureImpl.cpp" />
     <ClCompile Include="FiguresImpl.cpp" />
     <ClCompile Include="kursach.cpp" />
+    <ClCompile Include="SquareImpl.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Circle.h" />

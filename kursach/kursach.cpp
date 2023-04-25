@@ -27,7 +27,7 @@ int main()
 		Circle c(150, 150,80,RGB(0, 255, 0));
 		vectFig.add(&s);
 		vectFig.add(&c);
-	  //  ComplexFigure af(s, c);	  
+	   // ComplexFigure af(s, c);	  
 		vectFig.show();	
 	}
 	catch (Figure::FigureExeption figex) {
