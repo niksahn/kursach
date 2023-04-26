@@ -127,6 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ComplexFigureImpl.cpp" />
     <ClCompile Include="FigureImpl.cpp" />
     <ClCompile Include="FiguresImpl.cpp" />
     <ClCompile Include="kursach.cpp" />

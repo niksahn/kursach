@@ -6,14 +6,19 @@ class Circle : public Figure {
 private:
 	int radius;
 public:
-	Circle(int _x = 0, int _y = 0, int r = 0, COLORREF c = RGB(0, 0, 0)) : Figure(_x, _y, c), radius(r) { }
-	void draw() override {
+	Circle(int _x = 0, int _y = 0, int r = 0, COLORREF c = RGB(0, 0, 0)) : Figure(_x, _y, c), radius(r) {
+		checkBorder();
+	};
+	void checkBorder() {
 		if (((x - radius) <= rt.left) ||
 			((x + radius) >= rt.right) ||
 			((y - radius) <= rt.top) ||
 			((y + radius) >= rt.bottom)
 			) throw FigureExeption("Out of border!!!");
-		cout << " Circle draw: "; cout << radius << endl;
+	};
+	void draw() override {
+		checkBorder();
+	//	cout << " Circle draw: "; cout << "x: " << x << " y: " << y << " radius :" << radius << endl;
 		// рисуем окружность
 		HPEN   pen = CreatePen(PS_SOLID, 2, RGB(0, 0, 255));
 		HBRUSH brush = CreateSolidBrush(color);
@@ -24,9 +29,10 @@ public:
 		DeleteObject(pen);
 		DeleteObject(brush);
 	}
+	;
 	void hide() override {
 		//  выводим информацию об окружности
-		cout << " Circle hide: "; cout << radius << endl;
+	//	cout << " Circle hide: "; cout << "x: " << x << " y: " << y << " radius :" << radius << endl;
 		// рисуем окружность цветом фона
 		HPEN   pen = CreatePen(PS_SOLID, 2, GetBkColor(hdc));
 		HBRUSH brush = CreateSolidBrush(GetBkColor(hdc));
@@ -36,6 +42,6 @@ public:
 		// освобождаем ресурсы
 		DeleteObject(pen);
 		DeleteObject(brush);
-	}
+	};
 	friend bool checkAgrigate(Square, Circle);
 };

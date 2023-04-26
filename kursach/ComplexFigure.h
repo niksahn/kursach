@@ -1,18 +1,15 @@
 #pragma once
 #include "Figure.h"
-
+#include "Circle.h"
+#include "Square.h"
 
 class ComplexFigure : public Figure {
 private:
 	Square s;
 	Circle c;
 public:
-	ComplexFigure(Square _s, Circle _c) : s(_s), c(_c) {
-		if (!checkAgrigate(_s, _c)) throw FigureExeption("can`t make agrugate figure");
-
-	}
-	void draw() override {
-		c.draw();
-		s.draw();
-	}
+	ComplexFigure(Square _s, Circle _c);
+	void draw() override;
+	void move(int new_x, int new_y) override;
+	void hide() override;
 };
