@@ -28,7 +28,7 @@ int main()
 		vectFig.show();
 		Sleep(1200);
 		s.move(100, 300);		
-		vectFig.show();
+		vectFig.show();		
 	}
 	catch (Figure::FigureExeption figex) {
 		cout<<figex.name;

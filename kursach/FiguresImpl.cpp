@@ -8,3 +8,11 @@ void Figures::show() {
 		figure->draw();
 	}
 }
+
+Figures::~Figures() {
+	for (auto figure : figures_vector)
+	{
+		figures_vector.pop_back();
+		
+	}
+}
